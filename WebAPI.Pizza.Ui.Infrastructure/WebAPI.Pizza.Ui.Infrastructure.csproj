@@ -23,4 +23,8 @@
     <ProjectReference Include="..\WebAPI.Pizza.UI.Models\WebAPI.Pizza.UI.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

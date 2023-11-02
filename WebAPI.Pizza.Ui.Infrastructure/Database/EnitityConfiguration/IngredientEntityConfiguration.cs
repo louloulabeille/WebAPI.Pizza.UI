@@ -14,7 +14,8 @@ namespace WebAPI.Pizza.Ui.Infrastructure.Database.EnitityConfiguration
         public void Configure(EntityTypeBuilder<Ingredient> builder)
         {
             builder.ToTable(nameof(Ingredient));
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => x.Id)
+                .HasAnnotation("SqlServer:Identity", "1,1");
 
             builder.Property(x=>x.Nom).IsRequired()
                 .HasMaxLength(80);
