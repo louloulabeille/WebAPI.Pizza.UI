@@ -17,6 +17,7 @@ namespace WebAPI.Pizza.Ui.Infrastructure.Database
 
         #region DbSet
         public virtual DbSet<WebAPI.Pizza.UI.Models.Pizza> Pizzas { get; set; }
+        public virtual DbSet<Ingredient> Ingredients { get; set; }
         #endregion
 
         #region Configuration

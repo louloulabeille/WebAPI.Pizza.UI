@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Pizza.Ui.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Pizza.UI.Models", "WebAPI.Pizza.UI.Models\WebAPI.Pizza.UI.Models.csproj", "{89A4BF55-D38E-4367-B918-93020FDF61B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Pizza.Ui.Interface", "WebAPI.Pizza.Ui.Interface\WebAPI.Pizza.Ui.Interface.csproj", "{1D886F7E-556E-462E-B422-194BE237C678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{89A4BF55-D38E-4367-B918-93020FDF61B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89A4BF55-D38E-4367-B918-93020FDF61B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89A4BF55-D38E-4367-B918-93020FDF61B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D886F7E-556E-462E-B422-194BE237C678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D886F7E-556E-462E-B422-194BE237C678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D886F7E-556E-462E-B422-194BE237C678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D886F7E-556E-462E-B422-194BE237C678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA181680-55C8-4BF0-89F0-44613DBF465B} = {ED0C5B5D-F0C9-422D-8315-87F89CE676D7}
 		{89A4BF55-D38E-4367-B918-93020FDF61B1} = {ED0C5B5D-F0C9-422D-8315-87F89CE676D7}
+		{1D886F7E-556E-462E-B422-194BE237C678} = {ED0C5B5D-F0C9-422D-8315-87F89CE676D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27DFE9C7-9DA0-4AC8-B63F-CE6B5EEE8FC0}

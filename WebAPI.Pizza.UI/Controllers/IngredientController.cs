@@ -1,4 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebAPI.Pizza.Ui.Infrastructure.Database;
+using WebAPI.Pizza.Ui.Infrastructure.DataLayer;
+using WebAPI.Pizza.UI.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,18 +12,25 @@ namespace WebAPI.Pizza.UI.Controllers
     [ApiController]
     public class IngredientController : ControllerBase
     {
+        private readonly IngredientDataLayer _dataLayer;
+
+        public IngredientController(PizzaDbContext dbContext)
+        {
+            _dataLayer = new IngredientDataLayer(dbContext);
+        }
+
         // GET: api/<IngredientController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Ingredient> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _dataLayer.GetAll();
         }
 
         // GET api/<IngredientController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Ingredient? Get(int id)
         {
-            return "value";
+            return _dataLayer.GetById(id);
         }
 
         // POST api/<IngredientController>
