@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPI.Pizza.Ui.Infrastructure\WebAPI.Pizza.Ui.Infrastructure.csproj" />
+    <ProjectReference Include="..\WebAPI.Pizza.Ui.Interface\WebAPI.Pizza.Ui.Interface.csproj" />
+    <ProjectReference Include="..\WebAPI.Pizza.UI.Models\WebAPI.Pizza.UI.Models.csproj" />
+  </ItemGroup>
+
+</Project>

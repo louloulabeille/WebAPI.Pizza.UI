@@ -10,7 +10,7 @@ namespace WebAPI.Pizza.UI.Controllers
     {
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Pizza> Get()
         {
             return new string[] { "value1", "value2" };
         }
