@@ -50,7 +50,7 @@ namespace WebAPI.Pizza.Ui.Infrastructure.DataLayer
 
         public ICollection<UI.Models.Pizza> GetAll()
         {
-            return Context.Pizzas.ToList();
+            return Context.Pizzas.Include(x=>x.Ingredients).ToList();
         }
 
         public UI.Models.Pizza? GetById(int id)

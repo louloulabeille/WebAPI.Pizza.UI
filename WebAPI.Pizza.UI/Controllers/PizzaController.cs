@@ -23,11 +23,25 @@ namespace WebAPI.Pizza.UI.Controllers
             _repository = repository;
         }
 
+        /// <summary>
+        /// Retourne toutes les pizzas de la base
+        /// </summary>
+        /// <returns></returns>
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<WebAPI.Pizza.UI.Models.Pizza> Get()
+        public IActionResult GetAll()
         {
-            return _repository.GetAll();
+            IActionResult result = this.BadRequest();
+            try
+            {
+                result = this.Ok(_repository.GetAll());
+            }
+            catch
+            {
+                result = this.Problem("Erreur interne");
+            }
+
+            return result;
         }
 
         // GET api/<ValuesController>/5
