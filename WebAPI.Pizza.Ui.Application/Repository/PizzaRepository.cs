@@ -1,7 +1,7 @@
 ﻿using WebAPI.Pizza.Ui.Interface.Infrastructure;
 using WebAPI.Pizza.Ui.Interface.Repository;
 
-namespace WebAPI.Pizza.Ui.Application
+namespace WebAPI.Pizza.Ui.Application.Repository
 {
     public class PizzaRepository : IPizzaRepository
     {
@@ -40,6 +40,11 @@ namespace WebAPI.Pizza.Ui.Application
         public UI.Models.Pizza Update(UI.Models.Pizza pizza)
         {
             return _layer.Update(pizza);
+        }
+
+        public int SaveChanges()
+        {
+            return _layer.UnitOfWork.SaveChanges();
         }
     }
 }

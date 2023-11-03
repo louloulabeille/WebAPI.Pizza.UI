@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebAPI.Pizza.Ui.Infrastructure.Database.EnitityConfiguration;
+using WebAPI.Pizza.Ui.Interface.UnitOfWork;
 
 namespace WebAPI.Pizza.Ui.Infrastructure.Database
 {
-    public class PizzaDbContext : DbContext
+    public class PizzaDbContext : DbContext, IUnitOfWork
     {
         public PizzaDbContext(DbContextOptions options) : base(options)
         {

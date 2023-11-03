@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,11 @@ namespace WebAPI.Pizza.Ui.Infrastructure.DataLayer
         {
         }
 
-        public IUnitOfWork UnitOfWork => this.UnitOfWork;
+        public IUnitOfWork UnitOfWork => Context;
 
         public Ingredient Add(Ingredient ingredient)
         {
+            Context.Entry<IEnumerable<WebAPI.Pizza.UI.Models.Pizza>>(ingredient.pizzas).State = EntityState.Detached;
             return Context.Ingredients.Add(ingredient).Entity;
         }
 

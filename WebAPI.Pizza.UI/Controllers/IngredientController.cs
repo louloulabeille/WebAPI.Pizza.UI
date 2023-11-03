@@ -8,7 +8,7 @@ using WebAPI.Pizza.UI.Models;
 
 namespace WebAPI.Pizza.UI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class IngredientController : ControllerBase
     {

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAPI.Pizza.Ui.Interface.UnitOfWork;
 
 namespace WebAPI.Pizza.Ui.Interface.Repository
 {
-    public interface IPizzaRepository
+    public interface IPizzaRepository : IUnitOfWork
     {
         public ICollection<WebAPI.Pizza.UI.Models.Pizza> GetAll();
         public ICollection<WebAPI.Pizza.UI.Models.Pizza> Find(Func<WebAPI.Pizza.UI.Models.Pizza, bool> predicate);

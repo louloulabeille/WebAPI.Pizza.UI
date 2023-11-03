@@ -16,6 +16,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAllDbContext(builder.Configuration);
 #endregion
 
+#region Ajout Injection Layer et repository
+builder.Services.AddAllinjection();
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

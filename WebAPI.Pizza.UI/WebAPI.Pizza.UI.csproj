@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebAPI.Pizza.Ui.Application\WebAPI.Pizza.Ui.Application.csproj" />
     <ProjectReference Include="..\WebAPI.Pizza.Ui.Infrastructure\WebAPI.Pizza.Ui.Infrastructure.csproj" />
   </ItemGroup>
 

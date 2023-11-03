@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using WebAPI.Pizza.Ui.Infrastructure.Database;
 using WebAPI.Pizza.Ui.Interface.Infrastructure;
 using WebAPI.Pizza.Ui.Interface.UnitOfWork;
+using WebAPI.Pizza.UI.Models;
 
 namespace WebAPI.Pizza.Ui.Infrastructure.DataLayer
 {
@@ -15,10 +17,15 @@ namespace WebAPI.Pizza.Ui.Infrastructure.DataLayer
         {
         }
 
-        public IUnitOfWork UnitOfWork => this.UnitOfWork;
+        public IUnitOfWork UnitOfWork => this.Context;
 
         public UI.Models.Pizza Add(UI.Models.Pizza pizza)
         {
+            //Context.Entry<IEnumerable<Ingredient>>(pizza.Ingredients).State = Microsoft.EntityFrameworkCore.EntityState.Detached;
+            foreach(var item in pizza.Ingredients)
+            {
+                if (item.Id > 0) Context.Entry<Ingredient>(item).State = EntityState.Modified;
+            }
             return Context.Pizzas.Add(pizza).Entity;
         }
 
